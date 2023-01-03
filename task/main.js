@@ -3,9 +3,11 @@
 // You will need this in the following stages
 const input = require('sync-input')
 
-console.log("H A N G M A N");
+const wordList = Array.of("python","java","swift","javascript");
+let randomIndex = Math.floor(Math.random() * wordList.length);
+console.log("H A N G M A N",randomIndex);
 console.log("The game will be available soon.");
 
 let word = input("Guess the word:");
-let status = (word === "python") ? "You survived!" : "You lost!";
+let status = (word === wordList[randomIndex]) ? "You survived!" : "You lost!";
 console.log(status);
